@@ -110,10 +110,6 @@ switch (key) {
    
     case 'up':
       this.y = this.y - 80;
-      if(this.y < 0) {
-        this.x = 202;
-        this.y = -373.5;
-      }
     break;
     case 'down':
       if(this.y < 373.5) {
@@ -152,7 +148,23 @@ function myFunction() {
     window.style.display = "none";
   }
 }
+$(function(){
+  $("canvas").bind( "swipeleft", function(){
+        player.handleInput('left');
+  });
 
+  $("canvas").bind( "swiperight", function(){
+        player.handleInput('right');
+  });
+
+  $("canvas").bind( "swipeup", function(){
+        player.handleInput('up');
+  });
+
+  $("canvas").bind( "swipedown", function(){
+        player.handleInput('down');
+  });
+});
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
