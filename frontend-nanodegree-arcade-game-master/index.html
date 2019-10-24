@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<br>
+	<h1> 🎮👾 Nad's Classic Arcade Game Clone 👾🎮 </h1>
+	    <h1 id="text">Level : <span id="level">1</span></h1>
+	     <button onclick="myFunction()" class="btn-info">Game Rules</button>
+	    <div id="myDIV">
+<h3>Play the game</h3>
+
+Use the arrow keys to move the player up, down, left, and right respectively. The goal of the game is to move to the highest level which is the fifth without any collision with the enemy.
+
+<h3>Level up</h3>
+
+Complete each level by reaching the water without any collision with the enemy and this will raise you to the next level, and the collision will return you to the first level.
+
+
+
+<h3>Game over</h3>
+
+In case of a collision between you and the enemy, the game will end and it will be reset automatically so you can play again.</div>
+
+	<br>
+
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+
+
+            <dialog id="pop-up">
+           <h1> Congratulations You Win 🎈🥳</h1>
+          
+            </p>
+            
+            <button onclick="window.location.reload()" class="btn-endBoxRestart">Paly again</button>
+            </dialog>
+</body>
+</html>
