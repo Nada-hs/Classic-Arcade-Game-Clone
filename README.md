@@ -1,7 +1,5 @@
 # Classic Arcade Game Clone Project
 
-## Table of Contents
-
 ## Instructions
 - Time will start right away.
 - The player will move by the arrows in the keyboard
