@@ -1,6 +1,6 @@
 // Enemies our player must avoid
 let level = 1;
-
+var myGamePiece;
 
 var Enemy = function(x,y) {
     this.x=x;
@@ -73,8 +73,6 @@ this.x=x;
 this.y=y;
 this.sprite = 'images/char-horn-girl.png';
 
-//this.sprite =   'images/char-boy.png';
-
 Player.prototype.update=function() {
      if( this.y < 4 ){
         this.reset(); 
@@ -93,10 +91,9 @@ Player.prototype.render=function()
 
 }
 
-Player.prototype.handleInput=function(key)
+Player.prototype.handleInput=function move(key)
 {
 switch (key) {
-
      case 'right':
       if(this.x < 400) {
         this.x = this.x + 50;
@@ -109,7 +106,9 @@ switch (key) {
     break;
    
     case 'up':
+        if(this.y > 0) {
       this.y = this.y - 80;
+        }
     break;
     case 'down':
       if(this.y < 373.5) {
@@ -117,9 +116,10 @@ switch (key) {
       }
     break;
   }
-} 
+}
 
 }
+
 Player.prototype.reset = function(){
     this.x = 200;
     this.y = 400;
@@ -149,6 +149,7 @@ function myFunction() {
   }
 }
 
+
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
@@ -159,3 +160,29 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+function moveleft() {
+    player.handleInput('left')
+
+  }
+document.querySelector(".btn-left").addEventListener("click", moveleft);
+
+function moveright() {
+    player.handleInput('right')
+
+  }
+document.querySelector(".btn-right").addEventListener("click", moveright);
+
+function moveup() {
+    player.handleInput('up')
+
+  }
+document.querySelector(".btn-up").addEventListener("click", moveup);
+
+function movedown() {
+    player.handleInput('down')
+
+  }
+document.querySelector(".btn-down").addEventListener("click", movedown);
+
+
