@@ -97,7 +97,7 @@ h3{
 .btn{
     display: none;
   }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     body { 
         height:820px; 
         width:370px;  
