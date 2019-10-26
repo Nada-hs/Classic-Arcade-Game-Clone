@@ -140,7 +140,7 @@ let player = new Player(200,400);
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-const allEnemies =[ new Enemy(-100,50),new Enemy(-600,140),new Enemy(-165,230), new Enemy(-500,230), new Enemy(-200,140), new Enemy(-450,310), new Enemy(500,310)];
+const allEnemies =[ new Enemy(-100,50),new Enemy(-600,140),new Enemy(-165,230), new Enemy(-500,230), new Enemy(-200,140)];
 
 
 // This listens for key presses and sends the keys to your
