@@ -95,7 +95,7 @@ h3{
     transition: all 0.5s ease;
 }
 .btn{
-    display: none;
+    display: block;
   }
 @media only screen and (max-width: 800px) {
     body { 
@@ -103,8 +103,6 @@ h3{
         width:370px;  
            
     }
-    .btn{
-      display: block;
-    }
+  
 
 }
