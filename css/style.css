@@ -50,7 +50,20 @@ body {
       font-family: 'Monaco';
   }
   
-  
+  #pop-upl {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    top: 20%;
+    left: 2%;
+    width: 625px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 40px #e3e1e1;
+    list-style: none;
+    font-family: 'Monaco';
+}
   
   #pop-up h1 {
       margin: auto;
@@ -118,7 +131,7 @@ body {
   @media only screen and (max-width: 500px) {
       body { 
     height:310px; 
-    width:500px;  
+    width:400px;  
     background-image:     url('../images/sky-game-background-vector-21861325.jpg');
     background-position: center;
     background-repeat: no-repeat;
