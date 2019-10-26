@@ -73,8 +73,8 @@ this.x=x;
 this.y=y;
 this.sprite = 'images/char-horn-girl.png';
 
-Player.prototype.update=function() {
-     if( this.y < 4 ){
+Player.prototype.update=function(dt) {
+     if( this.y < -10 ){
         this.reset(); 
         level++;      
         if(level > 4){          
@@ -106,7 +106,7 @@ switch (key) {
     break;
    
     case 'up':
-        if(this.y > 0) {
+        if(this.y > -80) {
       this.y = this.y - 80;
         }
     break;
@@ -130,7 +130,7 @@ let player = new Player(200,400);
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-const allEnemies =[ new Enemy(-100,50),new Enemy(-600,140),new Enemy(-165,230), new Enemy(-500,230), new Enemy(-200,140)];
+const allEnemies =[ new Enemy(-100,50),new Enemy(-600,140),new Enemy(-165,230), new Enemy(-500,230), new Enemy(-200,140), new Enemy(-450,310), new Enemy(500,310)];
 
 
 // This listens for key presses and sends the keys to your
