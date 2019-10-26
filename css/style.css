@@ -94,6 +94,11 @@ h3{
     color: #02b3e4;
     transition: all 0.5s ease;
 }
+#btn{
+      display: none;
+
+
+  }
 .fas{
     font-size: 36px;
 }
@@ -109,5 +114,11 @@ h3{
         height: 50px;
         font-size: 50px;
         display: inline;
+    }
+	
+	   #btn{
+        display: block;
+  
+  
     }
 }
