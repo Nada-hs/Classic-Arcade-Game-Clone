@@ -110,17 +110,15 @@ body {
 
 
   #btn{
-      display: none;
+      display: block;
       text-align: center;
       margin-left: 100px;
    
-
-
   }
   .fas{
       font-size: 36px;
-      border-radius: 5px;
-      border: 1px solid #1b2429;
+    
+
   }
   .fas:hover{
     background-color: #f3f7f7;
@@ -142,16 +140,10 @@ body {
       }
   
       .fas{
-          width: 50px;
-          height: 50px;
           font-size: 50px;
           display: inline;
       }
-      #btn{
-        display: block;
-        text-align: center;
-  
-    }
+
 
     h1{
        text-align: center;
