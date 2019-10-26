@@ -1,5 +1,8 @@
 // Enemies our player must avoid
 let level = 1;
+let live = 3;
+
+
 var myGamePiece;
 
 var Enemy = function(x,y) {
@@ -41,11 +44,18 @@ Enemy.prototype.update = function(dt) {
     //every time collision with the enemies happened
     if( player.x > this.x -50 && player.x <this.x + 50 ){
         if( player.y >= this.y -50 && player.y <=  this.y+50 ){
+           live--;
             player.x = 200;
             player.y = 400;
-            window.location.reload();
+            if (live === 0) {
+            showloseBox(); 
+             livel =1 
+             live = 3;
+             // window.location.reload();
+            }
 
         }
+        document.getElementById("live").innerHTML= live;
 
     }
 
@@ -135,7 +145,11 @@ const allEnemies =[ new Enemy(-100,50),new Enemy(-600,140),new Enemy(-165,230), 
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
-
+function showloseBox(){
+  document.getElementById("pop-upl").style.display='block';
+  let dialog = document.querySelector('#pop-upl');
+  }
+  
 function showEndBox(){
 document.getElementById("pop-up").style.display='block';
 let dialog = document.querySelector('#pop-up');
