@@ -7,7 +7,7 @@
 ## How to Play
  Enter this link from your browser  https://nada-hs.github.io/Classic-Arcade-Game-Clone/
 
-## Play the game<
+## Play the game
 Use the arrow keys to move the player up, down, left, and right respectively. The goal of the game is to move to the highest level which is the fifth without any collision with the enemy.
 
 ## Level up
