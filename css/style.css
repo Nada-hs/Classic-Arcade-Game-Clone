@@ -1,7 +1,7 @@
 body {
     text-align: center;
     background-image:     url('../images/sky-game-background-vector-21861325.jpg');
-     height: 900px;
+     height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,7 +15,7 @@ h1{
     color: #0D47A1;
 }
 h3{
-	color: #0D47A1;
+  color: #0D47A1;
 }
 #myDIV {
   display: none;
@@ -92,4 +92,14 @@ h3{
     background-color: #f3f7f7;
     color: #02b3e4;
     transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 500px) {
+    body { 
+        height:310px; 
+        width:300px;  
+           
+    }
+
+
 }
