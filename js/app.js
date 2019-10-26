@@ -1,7 +1,9 @@
-// Enemies our player must avoid
-let level = 1;
-var myGamePiece;
 
+let level = 1;// levels of the game
+let live = 3; // lives of the plyer
+
+
+// Enemies our player must avoid
 var Enemy = function(x,y) {
     this.x=x;
     this.y=y;
@@ -38,21 +40,29 @@ Enemy.prototype.update = function(dt) {
 
 
   
+      //reset enemy's position
+      if( this.x >= 500 ){
+        this.reset();
+    }
+
     //every time collision with the enemies happened
     if( player.x > this.x -50 && player.x <this.x + 50 ){
         if( player.y >= this.y -50 && player.y <=  this.y+50 ){
+           live--;
             player.x = 200;
             player.y = 400;
-            window.location.reload();
+            if (live === 0) { // if collision happened plyer loose live
+            showloseBox(); 
+             livel =1 
+             live = 3;
+             // window.location.reload();
+            }
 
         }
+        document.getElementById("live").innerHTML= live;
 
     }
 
-      //reset enemy's position
-    if( this.x >= 500 ){
-        this.reset();
-    }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -73,12 +83,12 @@ this.x=x;
 this.y=y;
 this.sprite = 'images/char-horn-girl.png';
 
-Player.prototype.update=function() {
-     if( this.y < 4 ){
+Player.prototype.update=function(dt) {
+     if( this.y < -15 ){
         this.reset(); 
         level++;      
         if(level > 4){          
-          showEndBox();
+          showEndBox(); 
             
         }
         document.getElementById("level").innerHTML= level;
@@ -106,7 +116,7 @@ switch (key) {
     break;
    
     case 'up':
-        if(this.y > 0) {
+        if(this.y > -85) {
       this.y = this.y - 80;
         }
     break;
@@ -125,21 +135,26 @@ Player.prototype.reset = function(){
     this.y = 400;
 };
 
-let player = new Player(200,400);
+
  
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+const allEnemies =[ new Enemy(-160,50),new Enemy(-790,140),new Enemy(-520,50),new Enemy(-970,230),new Enemy(-280,230), new Enemy(-500,230), new Enemy(-200,140)];
 // Place the player object in a variable called player
-const allEnemies =[ new Enemy(-100,50),new Enemy(-600,140),new Enemy(-165,230), new Enemy(-500,230), new Enemy(-200,140)];
+let player = new Player(200,400);
 
-
-// This listens for key presses and sends the keys to your
-// Player.handleInput() method. You don't need to modify this.
-
+// Loose window
+function showloseBox(){
+  document.getElementById("pop-upl").style.display='block';
+  let dialog = document.querySelector('#pop-upl');
+  }
+  // Win window
 function showEndBox(){
 document.getElementById("pop-up").style.display='block';
 let dialog = document.querySelector('#pop-up');
 }
+
+//Toggle Info btn
 function myFunction() {
   var window = document.getElementById("myDIV");
   if (window.style.display === "none") {
@@ -149,7 +164,8 @@ function myFunction() {
   }
 }
 
-
+// This listens for key presses and sends the keys to your
+// Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
@@ -160,7 +176,7 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
-
+// This input for phons plyers 
 function moveleft() {
     player.handleInput('left')
 
