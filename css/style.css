@@ -1,6 +1,7 @@
 body {
     text-align: center;
     background-image:     url('../images/sky-game-background-vector-21861325.jpg');
+<<<<<<< HEAD
      height: 900px;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,6 +63,36 @@ h3{
     width: 120px;
     height: 30px;
     border: 1px solid #e9edef;
+=======
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: 'Monaco';
+  
+  }
+  h1{
+  
+      font-size: 25px;
+      color: #0D47A1;
+      
+  }
+  h3{
+      color: #0D47A1;
+  }
+  #myDIV {
+    display: none;
+    position: fixed;
+    left: 25%;
+    width: 50%;
+    padding: 10px 10px;
+    text-align: left;
+    background-color: #a0c2fa;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+>>>>>>> aab8a77fc2b9fe2862e7b0e2467c7460abafc3af
     border-radius: 5px;
     box-shadow: 1px 2px 4px rgba(235, 235, 235, 0.48);
     font-size: 1em;
@@ -69,11 +100,19 @@ h3{
 
 }
 
+<<<<<<< HEAD
 .btn-endBoxRestart:hover {
     background-color: #f3f7f7;
     color: #02b3e4;
     transition: all 0.5s ease;
 }
+=======
+  #btn{
+      display: none;
+      text-align: center;
+      margin-left: 100px;
+   
+>>>>>>> aab8a77fc2b9fe2862e7b0e2467c7460abafc3af
 
 .btn-info {
     color: #f3f7f7;
@@ -86,6 +125,7 @@ h3{
     font-size: 1em;
     font-family: 'Monaco';
 
+<<<<<<< HEAD
 }
 
 .btn-info:hover {
@@ -93,3 +133,68 @@ h3{
     color: #02b3e4;
     transition: all 0.5s ease;
 }
+=======
+  }
+  .fas{
+      font-size: 36px;
+      border-radius: 5px;
+      border: 1px solid #1b2429;
+  }
+  .fas:hover{
+    background-color: #f3f7f7;
+    color: #02b3e4;
+    transition: all 0.5s ease;
+
+  }
+  @media only screen and (max-width: 500px) {
+      body { 
+          height:310px; 
+          width:300px;  
+          background-image:     url('../images/sky-game-background-vector-21861325.jpg');
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: 'Monaco';
+             
+      }
+  
+      .fas{
+          width: 50px;
+          height: 50px;
+          font-size: 50px;
+          display: inline;
+      }
+      #btn{
+        display: block;
+  
+  
+    }
+
+    h1{
+  text-align: center;
+        font-size: 15px;
+        color: #0D47A1;
+        
+    }
+    h3{
+        font-size: 15px;
+        text-align: center;
+
+        color: #0D47A1;
+    }
+    .btn-info {
+        color: #f3f7f7;
+        background-color: #02b3e4;
+        width: 100px;
+        height: 20px;
+        border: 1px solid #e9edef;
+        border-radius: 5px;
+        box-shadow: 1px 2px 4px rgba(235, 235, 235, 0.48);
+        font-size: 10px;
+
+    
+    }
+  }
+>>>>>>> aab8a77fc2b9fe2862e7b0e2467c7460abafc3af
